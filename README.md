@@ -29,6 +29,12 @@ Exploratory analysis involved:
 ### Data Analysis
 SQL scripts were used to generate insights from the dataset, including:
 
+[Uploading KMS_DBS.sql…]()
+
+create database KMS_DBS;
+
+use KMS_DBS;
+
  ##### 1. **Product Category with Highest Sales**
 
 ```sql
