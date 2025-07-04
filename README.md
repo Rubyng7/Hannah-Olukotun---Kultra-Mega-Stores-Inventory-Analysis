@@ -1,6 +1,6 @@
 # Hannah-Olukotun---Kultra-Mega-Stores-Inventory-Analysis
 
-SQL analysis of  Kultra Mega Stores Inventory data and presentation of key insights and findings.  
+SQL analysis of Kultra Mega Stores Inventory data and presentation of key insights and findings.  
 
 ## Project Topic: Kultra-Mega-Stores-Inventory-Analysis
 
@@ -9,15 +9,20 @@ This project presents an inventory and sales analysis of Kultra Mega Stores usin
 
 ### Data Sources
 The data originates from the transactional records of Kultra Mega Stores. It includes:
-- Order and Sales Records
-- Product Categories and Sub-categories
-- Customer Demographics
-- Regional Sales Data
-- Shipping Methods and Costs
+- KMS Raw Data attached
+ - Order and Sales Records
+ - Product Categories and Sub-categories
+ - Customer Demographics
+  - Regional Sales Data
+ - Shipping Methods and Costs
+- Order Status data attached
+- SQL Script also attcahed 
+
 
 ### Tools Used
 - [Microsoft Excel](https://www.microsoft.com/en-gb/microsoft-365/excel) – For initial data review and column alignment.
 - **SQL** – For querying the relational database and generating insights, trends, and reports.
+- Dbeaver
 
 ### Exploratory Data Analysis
 Exploratory analysis involved:
