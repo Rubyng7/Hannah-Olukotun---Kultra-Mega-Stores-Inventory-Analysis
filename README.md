@@ -29,8 +29,9 @@ Exploratory analysis involved:
 ### Data Analysis
 SQL scripts were used to generate insights from the dataset, including:
 
+ ##### 1. **Product Category with Highest Sales**
+
 ```sql
--- Product Category with Highest Sales
 SELECT `Product Category`, SUM(Sales) AS Total_Sales
 FROM orders
 GROUP BY `Product Category`
@@ -38,7 +39,7 @@ ORDER BY Total_Sales DESC
 LIMIT 1;
 ```
 
-## 2. Top 3 and Bottom 3 Regions by Sales
+##### 2. Top 3 and Bottom 3 Regions by Sales
 
 ```sql
 SELECT Region, SUM(Sales) AS Total_Sales
@@ -54,7 +55,7 @@ ORDER BY Total_Sales ASC
 LIMIT 3;
 ```
 
-## 3. Total Sales of Appliances in Ontario
+##### 3. Total Sales of Appliances in Ontario
 
 ```sql
 SELECT SUM(Sales) AS Appliances_Sales_Ontario
@@ -62,7 +63,7 @@ FROM orders
 WHERE `Product Sub-Category` = 'Appliances' AND Province = 'Ontario';
 ```
 
-## 4. Bottom 10 Customers by Total Sales
+##### 4. Bottom 10 Customers by Total Sales
 
 ```sql
 SELECT `Customer Name`, SUM(Sales) AS Total_Sales
@@ -72,7 +73,7 @@ ORDER BY Total_Sales ASC
 LIMIT 10;
 ```
 
-## 5. Shipping Method with the Highest Total Shipping Cost
+##### 5. Shipping Method with the Highest Total Shipping Cost
 
 ```sql
 SELECT `Ship Mode`, SUM(`Shipping Cost`) AS Total_Shipping_Cost
@@ -82,7 +83,7 @@ ORDER BY Total_Shipping_Cost DESC
 LIMIT 1;
 ```
 
-## 6. Most Valuable Customers and What They Purchase
+##### 6. Most Valuable Customers and What They Purchase
 
 **Top Customers by Total Profit**
 
@@ -110,7 +111,7 @@ GROUP BY o.`Customer Name`, o.`Product Category`
 ORDER BY o.`Customer Name`, Total_Sales DESC;
 ```
 
-## 7. Small Business Customer with the Highest Sales
+##### 7. Small Business Customer with the Highest Sales
 
 ```sql
 SELECT `Customer Name`, SUM(Sales) AS Total_Sales
@@ -121,7 +122,7 @@ ORDER BY Total_Sales DESC
 LIMIT 1;
 ```
 
-## 8. Corporate Customer with Most Orders (2009–2012)
+##### 8. Corporate Customer with Most Orders (2009–2012)
 
 ```sql
 SELECT `Customer Name`, COUNT(DISTINCT `Order ID`) AS Order_Count
@@ -133,7 +134,7 @@ ORDER BY Order_Count DESC
 LIMIT 1;
 ```
 
-## 9. Most Profitable Consumer Customer
+##### 9. Most Profitable Consumer Customer
 
 ```sql
 SELECT `Customer Name`, SUM(Profit) AS Total_Profit
@@ -144,7 +145,7 @@ ORDER BY Total_Profit DESC
 LIMIT 1;
 ```
 
-## 10. Customers Who Returned Items (Profit < 0) by Segment
+##### 10. Customers Who Returned Items (Profit < 0) by Segment
 
 ```sql
 SELECT `Customer Name`, `Customer Segment`, COUNT(*) AS Suspected_Returns
@@ -154,7 +155,7 @@ GROUP BY `Customer Name`, `Customer Segment`
 ORDER BY Suspected_Returns DESC;
 ```
 
-## 11. Shipping Cost Analysis by Order Priority
+##### 11. Shipping Cost Analysis by Order Priority
 
 ```sql
 SELECT `Order Priority`, `Ship Mode`, 
@@ -174,7 +175,7 @@ Additional insights include:
 - Corporate customer with most orders (2009–2012)
 - Relationship between shipping cost and order priority
 
-## Result/Findings
+### Result/Findings
 - **Furniture** was the highest-grossing product category.
 - **Ontario** showed strong appliance sales, suggesting regional preferences.
 - **Standard Class** shipping incurred the highest cost overall.
@@ -182,17 +183,17 @@ Additional insights include:
 - Several customers with **negative profit** values indicate possible returns or shipping issues.
 - **Corporate customers** showed high frequency of orders between 2009–2012, indicating sustained loyalty.
 
-## Recommendations
+### Recommendations
 - Focus marketing and promotions on high-performing regions like Ontario.
 - Review shipping practices, especially in the Standard Class, for cost optimization.
 - Introduce loyalty benefits for top consumer and corporate customers.
 - Investigate recurring negative-profit orders to improve return policies and profit margins.
 
-## Limitations
+### Limitations
 - The analysis is based on historical and static data; real-time trends are not captured.
 - Profit loss does not indicate actual returns; assumptions are made based on negative profit.
 - Data does not include inventory stock levels or warehouse performance, limiting supply chain visibility.
 
-## References
+### References
 - Internal KMS Orders Database
 - SQL Documentation: [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
