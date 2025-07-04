@@ -189,7 +189,7 @@ Additional insights include:
 ### Result/Findings
 - **Furniture** was the highest-grossing product category.
 - **Ontario** showed strong appliance sales, suggesting regional preferences.
-- **Standard Class** shipping incurred the highest cost overall.
+- **Delivery Truck** shipping mode incurred the highest cost overall.
 - **Most profitable customers** were from the Consumer segment.
 - Several customers with **negative profit** values indicate possible returns or shipping issues.
 - **Corporate customers** showed high frequency of orders between 2009–2012, indicating sustained loyalty.
@@ -207,4 +207,4 @@ Additional insights include:
 
 ### References
 - Internal KMS Orders Database
-- SQL Documentation: [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
+- SQL Documentation: [Dbeaver](https://dbeaver.io/download/)
