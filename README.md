@@ -16,7 +16,6 @@ The data originates from the transactional records of Kultra Mega Stores. It inc
   - Regional Sales Data
  - Shipping Methods and Costs
 - Order Status data attached
-- SQL Script also attcahed 
 
 
 ### Tools Used
@@ -34,7 +33,7 @@ Exploratory analysis involved:
 ### Data Analysis
 SQL scripts were used to generate insights from the dataset, including:
 
-[Uploading KMS_DBS.sql…]()
+SQL Script also attcahed 
 
 create database KMS_DBS;
 
@@ -187,7 +186,7 @@ Additional insights include:
 - Relationship between shipping cost and order priority
 
 ### Result/Findings
-- **Furniture** was the highest-grossing product category.
+- **Technology** had the highest total sales in product category.
 - **Ontario** showed strong appliance sales, suggesting regional preferences.
 - **Delivery Truck** shipping mode incurred the highest cost overall.
 - **Most profitable customers** were from the Consumer segment.
